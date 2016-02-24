@@ -9,8 +9,15 @@
 - [Drools](http://www.drools.org/)
 - [Drools - Documentation](http://www.drools.org/learn/documentation.html)
 - [jBPM6 Developer Guide](http://techbus.safaribooksonline.com/book/programming/java/9781783286614)
+- [Mastering jBPM6](http://techbus.safaribooksonline.com/book/operating-systems-and-server-administration/9781783289578)
 - [JBPM and Drools Introduction](http://training-course-material.com/training/JBPM_and_Drools_Introduction)
 - [Drools JBoss Rules 5.X Developer's Guide](http://techbus.safaribooksonline.com/book/programming/java/9781782161264)
+- [HOW TO CODE RULES IN DROOLS](http://blog.davincisoftware.sk/how-to-code-rules-in-drools)
+- [Drools-Spring-Integration demo](https://github.com/deepu105/drools-demo)
+- [jBPM Training Materials](http://training-course-material.com/training/Category:JBPM)
+- [Drools6.0 Basic Example](https://skills421.wordpress.com/2013/12/29/drools6-0-basic-example/)
+- [Drools 6.0 (JudCon 2013)](http://www.slideshare.net/MarkProctor/jud-con2013-drools6)
+- [A minimal Spring Boot Drools web service](http://scattercode.co.uk/2015/02/06/a-minimal-spring-boot-drools-web-service/)
 
 ### BPMN
 - [BPMN Specification - Business Process Model and Notation](http://www.bpmn.org/)
