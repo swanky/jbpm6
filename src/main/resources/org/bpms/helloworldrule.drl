@@ -1,0 +1,8 @@
+package org.bpms
+
+rule "helloworldrule"
+ruleflow-group "helloworldgroup"
+when 
+then
+	System.out.println("Hello World! (From helloworldrule.drl)");
+end

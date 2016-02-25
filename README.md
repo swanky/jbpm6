@@ -1,5 +1,7 @@
 # jBPM6 Example
 
+[Github URL](https://github.com/swanky/jbpm6)
+
 ## References
 
 ### jBPM and Drools
@@ -28,7 +30,7 @@
 - [Introduction To BPMN 2](http://www.slideshare.net/jimarlow/introductiontobpmn005)
 - [BPMN tutorial](http://www.bpmn-tool.com/en/tutorial/)
 
-###Eclipse¤U¸ü¸ê°T
+###Eclipse Plugins
 - [Drools 6.3.0.Final Update Site - Nightly Build Update Site](http://download.jboss.org/drools/release/6.3.0.Final/org.drools.updatesite/)
 - [JBoss Tools update site](http://download.jboss.org/jbosstools/mars/stable/updates/)
 - [JBoss Tools - All Downloads](http://tools.jboss.org/downloads/overview.html)
