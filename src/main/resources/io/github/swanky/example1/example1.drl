@@ -1,0 +1,8 @@
+package io.github.swanky.example1
+
+rule "Is of valid age"
+when
+    $a : Applicant( age < 18 )
+then
+    $a.setValid( false );
+end

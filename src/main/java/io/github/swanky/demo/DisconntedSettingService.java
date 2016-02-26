@@ -1,4 +1,4 @@
-package io.github.swanky;
+package io.github.swanky.demo;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,14 +13,14 @@ import org.kie.internal.utils.KieHelper;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class DisconnectManagementService {
+public class DisconntedSettingService {
 
-	private static final String PROCESS_DEF = "io/github/swanky/createDisconnectedRule.bpmn2";
-	private static final String PROCESS_NAME = "io.github.swanky.Create_Disconnected_Rule_Process";
+	private static final String PROCESS_DEF = "io/github/swanky/demo/createDisconnectedRule.bpmn2";
+	private static final String PROCESS_NAME = "io.github.swanky.demo.Create_Disconnected_Rule_Process";
 
 	private KieBase kieBase;
 
-	public DisconnectManagementService() {
+	public DisconntedSettingService() {
 		KieHelper kieHelper = new KieHelper();
 		kieBase = kieHelper.addResource(ResourceFactory.newClassPathResource(PROCESS_DEF)).build();
 	}

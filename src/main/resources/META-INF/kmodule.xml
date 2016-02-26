@@ -2,4 +2,8 @@
 
 	<kbase name="kbase" packages="com.sample" />
 
+	<kbase name="BusPassKbase" packages="com.sctrcd.buspassws.rules">
+		<ksession name="BusPassSession" />
+	</kbase>
+
 </kmodule>

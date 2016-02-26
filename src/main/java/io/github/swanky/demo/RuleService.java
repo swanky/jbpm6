@@ -1,4 +1,4 @@
-package io.github.swanky;
+package io.github.swanky.demo;
 
 import lombok.extern.slf4j.Slf4j;
 
