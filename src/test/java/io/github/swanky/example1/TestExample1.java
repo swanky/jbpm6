@@ -9,7 +9,7 @@ import org.kie.api.runtime.StatelessKieSession;
 import org.kie.internal.io.ResourceFactory;
 import org.kie.internal.utils.KieHelper;
 
-public class TestEx1 {
+public class TestExample1 {
 
 	@Test
 	public void test() throws Exception {

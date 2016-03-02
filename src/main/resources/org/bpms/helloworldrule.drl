@@ -6,3 +6,10 @@ when
 then
 	System.out.println("Hello World! (From helloworldrule.drl)");
 end
+
+rule "helloworldrule2"
+ruleflow-group "helloworldgroup2"
+when 
+then
+	System.out.println("Hello World 2! (From helloworldrule.drl)");
+end

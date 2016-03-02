@@ -27,13 +27,13 @@
           <tns:metaValue><![CDATA[End]]></tns:metaValue>
         </tns:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_1" tns:priority="1" sourceRef="StartEvent_1" targetRef="ScriptTask_1"/>
-    <bpmn2:businessRuleTask id="BusinessRuleTask_1" tns:ruleFlowGroup="helloworldgroup" name="BusinessRule">
+    <bpmn2:businessRuleTask id="BusinessRuleTask_1" tns:ruleFlowGroup="helloworldgroup" name="BusinessRule1">
       <bpmn2:extensionElements>
         <tns:metaData name="elementname">
-          <tns:metaValue><![CDATA[BusinessRule]]></tns:metaValue>
+          <tns:metaValue><![CDATA[BusinessRule1]]></tns:metaValue>
         </tns:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
@@ -47,11 +47,21 @@
         </tns:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
       <bpmn2:script>System.out.println(&quot;Hello World! (from ScriptTask2)&quot;);</bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_7" tns:priority="1" sourceRef="ScriptTask_2" targetRef="EndEvent_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_8" tns:priority="1" sourceRef="BusinessRuleTask_1" targetRef="ScriptTask_2"/>
+    <bpmn2:businessRuleTask id="BusinessRuleTask_2" tns:ruleFlowGroup="helloworldgroup2" name="BusinessRule2">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[BusinessRule2]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" tns:priority="1" sourceRef="ScriptTask_2" targetRef="BusinessRuleTask_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_9" tns:priority="1" sourceRef="BusinessRuleTask_2" targetRef="EndEvent_1"/>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_Process_1" bpmnElement="org.bpms.HelloWorld">
@@ -62,53 +72,64 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_ScriptTask_1" bpmnElement="ScriptTask_1">
-        <dc:Bounds height="50.0" width="110.0" x="170.0" y="38.0"/>
+        <dc:Bounds height="50.0" width="110.0" x="110.0" y="38.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_2">
-          <dc:Bounds height="15.0" width="58.0" x="196.0" y="55.0"/>
+          <dc:Bounds height="15.0" width="58.0" x="136.0" y="55.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_EndEvent_1" bpmnElement="EndEvent_1">
-        <dc:Bounds height="36.0" width="36.0" x="720.0" y="45.0"/>
+        <dc:Bounds height="36.0" width="36.0" x="721.0" y="45.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_3">
-          <dc:Bounds height="15.0" width="22.0" x="727.0" y="81.0"/>
+          <dc:Bounds height="15.0" width="22.0" x="728.0" y="81.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_BusinessRuleTask_1" bpmnElement="BusinessRuleTask_1">
-        <dc:Bounds height="50.0" width="110.0" x="330.0" y="38.0"/>
-        <bpmndi:BPMNLabel>
-          <dc:Bounds height="15.0" width="79.0" x="345.0" y="55.0"/>
+        <dc:Bounds height="50.0" width="110.0" x="250.0" y="38.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="15.0" width="86.0" x="262.0" y="55.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_ScriptTask_2" bpmnElement="ScriptTask_2">
-        <dc:Bounds height="50.0" width="110.0" x="510.0" y="38.0"/>
+        <dc:Bounds height="50.0" width="110.0" x="400.0" y="38.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="15.0" width="65.0" x="422.0" y="55.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_BusinessRuleTask_2" bpmnElement="BusinessRuleTask_2">
+        <dc:Bounds height="50.0" width="110.0" x="550.0" y="38.0"/>
         <bpmndi:BPMNLabel>
-          <dc:Bounds height="15.0" width="65.0" x="532.0" y="55.0"/>
+          <dc:Bounds height="15.0" width="86.0" x="562.0" y="55.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_StartEvent_1" targetElement="BPMNShape_ScriptTask_1">
         <di:waypoint xsi:type="dc:Point" x="81.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="125.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="170.0" y="63.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_5"/>
+        <di:waypoint xsi:type="dc:Point" x="100.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="110.0" y="63.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_ScriptTask_1" targetElement="BPMNShape_BusinessRuleTask_1">
-        <di:waypoint xsi:type="dc:Point" x="280.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="305.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="330.0" y="63.0"/>
-        <bpmndi:BPMNLabel/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_7" bpmnElement="SequenceFlow_7" sourceElement="BPMNShape_ScriptTask_2" targetElement="BPMNShape_EndEvent_1">
-        <di:waypoint xsi:type="dc:Point" x="620.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="670.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="670.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="720.0" y="63.0"/>
-        <bpmndi:BPMNLabel/>
+        <di:waypoint xsi:type="dc:Point" x="220.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="250.0" y="63.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_BusinessRuleTask_1" targetElement="BPMNShape_ScriptTask_2">
-        <di:waypoint xsi:type="dc:Point" x="440.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="475.0" y="63.0"/>
-        <di:waypoint xsi:type="dc:Point" x="475.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="360.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="390.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="390.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="400.0" y="63.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_ScriptTask_2" targetElement="BPMNShape_BusinessRuleTask_2">
         <di:waypoint xsi:type="dc:Point" x="510.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="525.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="550.0" y="63.0"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_9" bpmnElement="SequenceFlow_9" sourceElement="BPMNShape_BusinessRuleTask_2" targetElement="BPMNShape_EndEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="660.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="711.0" y="63.0"/>
+        <di:waypoint xsi:type="dc:Point" x="721.0" y="63.0"/>
         <bpmndi:BPMNLabel/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

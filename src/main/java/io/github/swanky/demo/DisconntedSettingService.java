@@ -38,7 +38,10 @@ public class DisconntedSettingService {
 
 		RuleFlowProcessInstance rfpi = (RuleFlowProcessInstance) pi;
 		String ruleId = (String) rfpi.getVariable("ruleId");
-		log.info("Process Done - RuleId: " + ruleId);
+		if (rfpi.getState() == ProcessInstance.STATE_COMPLETED) {
+			log.info(String.format("Process \"%s\" is COMPLETED", rfpi.getProcessName()));
+		}
+		log.info("RuleId: " + ruleId);
 		return ruleId;
 	}
 }
